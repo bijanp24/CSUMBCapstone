@@ -57,6 +57,10 @@ If you use a generic static server, serve this published `wwwroot` folder, not t
 
 Netlify settings are defined in `netlify.toml`:
 
-- Build command: `dotnet publish CSUMBPortfolioSite.csproj -c Release`
-- Publish directory: `bin/Release/net8.0/publish/wwwroot`
+- Build command: installs .NET 8 SDK, runs `dotnet publish`, and fails if `_framework` is missing
+- Publish directory: `release/wwwroot` (the compiled static site, not the source `wwwroot` folder)
 - SPA fallback: all routes serve `/index.html`
+
+In the Netlify UI (**Site configuration → Build & deploy → Continuous deployment**), either leave build settings empty so `netlify.toml` is used, or match the values above exactly. If the publish directory is set to `wwwroot` alone, Netlify will deploy source files without `_framework` and the site will fail with `Unexpected token '<'`.
+
+After a deploy, open `https://<your-site>/_framework/blazor.boot.json` in the browser. You should see JSON, not the home page HTML.

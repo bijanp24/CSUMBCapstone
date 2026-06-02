@@ -1,6 +1,18 @@
 [build]
-  command = "dotnet publish CSUMBPortfolioSite.csproj -c Release"
-  publish = "bin/Release/net8.0/publish/wwwroot"
+  # Install .NET 8 on Netlify's build image (default image may not include it), then publish.
+  command = """
+    curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel 8.0 --install-dir "${HOME}/.dotnet" && \
+    export DOTNET_ROOT="${HOME}/.dotnet" && \
+    export PATH="${DOTNET_ROOT}:${PATH}" && \
+    dotnet --version && \
+    dotnet publish CSUMBPortfolioSite.csproj -c Release -o release && \
+    test -f release/wwwroot/_framework/blazor.boot.json
+  """
+  publish = "release/wwwroot"
+
+[build.environment]
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE = "1"
+  DOTNET_CLI_TELEMETRY_OPTOUT = "1"
 
 [[redirects]]
   from = "/*"
