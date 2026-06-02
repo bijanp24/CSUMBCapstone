@@ -1,6 +1,6 @@
 [build]
   # Install .NET 8, publish, then copy the built site into wwwroot (Netlify often publishes wwwroot from the UI).
-  command = """
+  command = '''
     curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel 8.0 --install-dir "${HOME}/.dotnet" && \
     export DOTNET_ROOT="${HOME}/.dotnet" && \
     export PATH="${DOTNET_ROOT}:${PATH}" && \
@@ -8,8 +8,8 @@
     dotnet publish CSUMBPortfolioSite.csproj -c Release -o release && \
     test -f release/wwwroot/_framework/blazor.boot.json && \
     cp -r release/wwwroot/. wwwroot/ && \
-    ! grep -q '#\[.{fingerprint}\]' wwwroot/index.html
-  """
+    ! grep -q 'fingerprint' wwwroot/index.html
+  '''
   publish = "wwwroot"
 
 [build.environment]
