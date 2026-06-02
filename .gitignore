@@ -1,5 +1,7 @@
 bin/
 obj/
+release/
+wwwroot/_framework/
 http.out
 http.err
 *.user

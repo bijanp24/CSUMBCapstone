@@ -55,12 +55,19 @@ If you use a generic static server, serve this published `wwwroot` folder, not t
 
 ## Netlify
 
-Netlify settings are defined in `netlify.toml`:
+### Option A: Netlify build (netlify.toml)
 
-- Build command: installs .NET 8 SDK, runs `dotnet publish`, and fails if `_framework` is missing
-- Publish directory: `release/wwwroot` (the compiled static site, not the source `wwwroot` folder)
-- SPA fallback: all routes serve `/index.html`
+`netlify.toml` installs .NET 8, publishes the app, copies the built files into `wwwroot/`, and publishes that folder. The build fails if `index.html` still contains the unpublished `#[.{fingerprint}]` script placeholder.
 
-In the Netlify UI (**Site configuration → Build & deploy → Continuous deployment**), either leave build settings empty so `netlify.toml` is used, or match the values above exactly. If the publish directory is set to `wwwroot` alone, Netlify will deploy source files without `_framework` and the site will fail with `Unexpected token '<'`.
+In the Netlify UI (**Site configuration → Build & deploy**), clear any custom build command and publish directory so `netlify.toml` is used, or set publish directory to **`wwwroot`** only (do not point at the repo’s source `wwwroot` without running the build).
 
-After a deploy, open `https://<your-site>/_framework/blazor.boot.json` in the browser. You should see JSON, not the home page HTML.
+### Option B: GitHub Actions (recommended if Netlify builds keep failing)
+
+1. In Netlify: **Site configuration → Build & deploy → Continuous deployment → Build settings**, set **Build command** to empty and enable **Stop builds** (or ignore Netlify builds).
+2. In GitHub: add repository secrets `NETLIFY_AUTH_TOKEN` and `NETLIFY_SITE_ID` (from Netlify **User settings → Applications** and **Site configuration → General**).
+3. Push to `main`; `.github/workflows/deploy-netlify.yml` publishes `release/wwwroot` to production.
+
+### Verify a deploy
+
+- `https://<your-site>/_framework/blazor.boot.json` should return JSON.
+- View page source for `/`; the script tag should reference `_framework/blazor.webassembly.js`, not `#[.{fingerprint}]`.
