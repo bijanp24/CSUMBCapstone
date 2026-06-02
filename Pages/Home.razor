@@ -1,0 +1,81 @@
+@page "/"
+
+<PageTitle>Bijan Pourazari | CSUMB Computer Science Portfolio</PageTitle>
+
+<section class="hero">
+    <div class="hero-copy">
+        <p class="eyebrow">Recovered CSUMB portfolio</p>
+        <h1>Hi, I am Bijan Pourazari.</h1>
+        <p>
+            A Computer Science student at California State University, Monterey Bay,
+            with experience in web development, mobile app development, ASP.NET MVC,
+            AngularJS, C#, WebAPI, Android, Java, iOS, and Swift.
+        </p>
+        <div class="hero-actions">
+            <NavLink class="button primary" href="courses">Explore coursework</NavLink>
+            <NavLink class="button secondary" href="courses/cst-499-directed-group-capstone">View capstone</NavLink>
+        </div>
+    </div>
+    <div class="hero-portrait">
+        <img src="portfolio/published/bijan-pourazari.jpg" alt="Bijan Pourazari" />
+        <img src="portfolio/published/csumb-logo-black.png" alt="California State University, Monterey Bay logo" />
+    </div>
+</section>
+
+<section class="section">
+    <div class="section-heading">
+        <p class="eyebrow">CS Online degree completion program</p>
+        <h2>Computer science theory paired with hands-on information technology practice.</h2>
+        <p>
+            CSUMB's online Computer Science program connects students with faculty,
+            practicing professionals, and collaborative project work designed for the
+            fast-moving information economy.
+        </p>
+    </div>
+    <div class="service-grid">
+        <article>
+            <h3>Software Engineering</h3>
+            <p>Requirements, design, implementation, testing, and team project delivery.</p>
+        </article>
+        <article>
+            <h3>Web and Databases</h3>
+            <p>Dynamic web applications, relational database design, SQL, PHP, MySQL, JavaScript, and Java servlets.</p>
+        </article>
+        <article>
+            <h3>Media and Data</h3>
+            <p>Python multimedia processing, networking foundations, algorithms, and introductory data science.</p>
+        </article>
+    </div>
+</section>
+
+<section class="feature-band">
+    <div>
+        <p class="eyebrow">Portfolio archive</p>
+        <h2>All recovered course pages are preserved.</h2>
+        <p>
+            The old Weebly portfolio content has been reshaped into a clean static
+            Blazor experience with course descriptions, project notes, images, PDFs,
+            Word documents, Java files, and original external links.
+        </p>
+        <NavLink class="text-link" href="courses">Browse the course catalog</NavLink>
+    </div>
+    <div class="stats">
+        <strong>@CourseCatalog.Courses.Count</strong>
+        <span>courses restored</span>
+    </div>
+</section>
+
+<section class="section split">
+    <div>
+        <p class="eyebrow">A little about myself</p>
+        <h2>Web, mobile, and software development experience.</h2>
+    </div>
+    <div>
+        <p>
+            I have worked with ASP.NET MVC, AngularJS, C#, and WebAPI, and have
+            developed for both Android and iOS. This portfolio captures the CSUMB
+            coursework that supported that path into software development.
+        </p>
+        <NavLink class="button primary" href="courses/cst-499-directed-group-capstone">See final capstone work</NavLink>
+    </div>
+</section>

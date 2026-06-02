@@ -1,0 +1,34 @@
+<header class="site-header">
+    <a class="brand" href="" aria-label="Bijan Pourazari portfolio home">
+        <span>Bijan Pourazari</span>
+        <small>CSUMB Portfolio</small>
+    </a>
+
+    <button class="menu-button" type="button" aria-label="Toggle navigation" @onclick="ToggleNavMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav class="@NavMenuCssClass" aria-label="Primary" @onclick="CloseNavMenu">
+        <NavLink href="" Match="NavLinkMatch.All">Home</NavLink>
+        <NavLink href="courses">Courses</NavLink>
+        <NavLink href="courses/cst-499-directed-group-capstone">Capstone</NavLink>
+    </nav>
+</header>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "primary-nav collapsed" : "primary-nav";
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+
+    private void CloseNavMenu()
+    {
+        collapseNavMenu = true;
+    }
+}

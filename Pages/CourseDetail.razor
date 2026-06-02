@@ -1,0 +1,79 @@
+@page "/courses/{Slug}"
+
+@if (Course is null)
+{
+    <PageTitle>Course Not Found | Bijan Pourazari CSUMB Portfolio</PageTitle>
+
+    <section class="page-hero">
+        <p class="eyebrow">Not found</p>
+        <h1>That course was not found.</h1>
+        <p>The recovered archive does not include a course with this address.</p>
+        <NavLink class="button primary" href="courses">Back to courses</NavLink>
+    </section>
+}
+else
+{
+    <PageTitle>@Course.Code @Course.Title | Bijan Pourazari CSUMB Portfolio</PageTitle>
+
+    <section class="page-hero course-hero">
+        <p class="eyebrow">@Course.Code</p>
+        <h1>@Course.Title</h1>
+        <p>@Course.Description</p>
+        <div class="card-meta">
+            <span>@Course.Units units</span>
+            <span>@Course.Projects.Count restored project section@(Course.Projects.Count == 1 ? "" : "s")</span>
+        </div>
+    </section>
+
+    <section class="project-list">
+        @foreach (var project in Course.Projects)
+        {
+            <article class="project-block">
+                <div>
+                    <h2>@project.Title</h2>
+                    <p>@project.Description</p>
+                </div>
+
+                @if (project.Images is { Count: > 0 })
+                {
+                    <div class="image-grid">
+                        @foreach (var image in project.Images)
+                        {
+                            <img src="@image" alt="@($"{project.Title} artifact")" loading="lazy" />
+                        }
+                    </div>
+                }
+
+                @if (project.Artifacts.Count > 0 || project.ExternalLinks is { Count: > 0 })
+                {
+                    <div class="artifact-list">
+                        @foreach (var artifact in project.Artifacts)
+                        {
+                            <a href="@artifact.Url" target="_blank" rel="noopener">
+                                <span>@artifact.Label</span>
+                                <small>@artifact.Kind</small>
+                            </a>
+                        }
+                        @if (project.ExternalLinks is not null)
+                        {
+                            @foreach (var link in project.ExternalLinks)
+                            {
+                                <a href="@link.Url" target="_blank" rel="noopener">
+                                    <span>@link.Label</span>
+                                    <small>@link.Kind</small>
+                                </a>
+                            }
+                        }
+                    </div>
+                }
+            </article>
+        }
+    </section>
+}
+
+@code {
+    [Parameter]
+    public string? Slug { get; set; }
+
+    private PortfolioCourse? Course => Slug is null ? null : CourseCatalog.Find(Slug);
+}

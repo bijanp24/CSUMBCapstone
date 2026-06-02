@@ -1,0 +1,21 @@
+@inherits LayoutComponentBase
+
+<div class="site-shell">
+    <NavMenu />
+
+    <main>
+        @Body
+    </main>
+
+    <footer class="site-footer">
+        <div>
+            <strong>Bijan Pourazari</strong>
+            <p>Recovered CSUMB Computer Science portfolio, rebuilt as a static Blazor site.</p>
+        </div>
+        <nav aria-label="Footer">
+            <NavLink href="">Home</NavLink>
+            <NavLink href="courses">Courses</NavLink>
+            <NavLink href="courses/cst-499-directed-group-capstone">Capstone</NavLink>
+        </nav>
+    </footer>
+</div>

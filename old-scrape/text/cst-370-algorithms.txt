@@ -1,0 +1,45 @@
+URL: https://bijanpourazaricsumb.weebly.com/cst-370-algorithms.html
+TITLE: CST 370: Algorithms - BIJAN POURAZARI
+
+CST 370: Algorithms - BIJAN POURAZARI
+BIJAN POURAZARI
+Home
+Courses
+CST 300, Major ProSeminar
+CST 205: Multimedia Design and Programming
+CST 338: Software Design
+CST 361S: CS and Community Service
+CST 363: Database Management
+CST 311: Introduction to Computer Networking
+CS 336: Internet Programming
+CST 383: Intro to Data Science
+CST 370: Algorithms
+CST 438: Software Engineering
+CST 499: Directed Group Capstone
+CST 370: Design and Analysis of Algorithms
+Students learn important data structures in computer science and acquire fundamental algorithm design techniques to get the efficient solutions to several computing problems from various disciplines. Topics include the analysis of algorithm efficiency, hash, heap, graph, tree, sorting and searching, brute force, divide-and-conquer, decrease-and-conquer, transform-and-conquer, dynamic programming, and greedy programming. (Prereq:
+CST 238
+AND
+MATH 170
+)
+Units:
+4 — 4
+Course Material
+The class did not allow us to show class material or our programming assignment solutions. Here are examples from the textbook of what we covered:
+Here is an example of the output from one of our programming assignments:
+Powered by
+Create your own unique website with customizable templates.
+Get Started
+Home
+Courses
+CST 300, Major ProSeminar
+CST 205: Multimedia Design and Programming
+CST 338: Software Design
+CST 361S: CS and Community Service
+CST 363: Database Management
+CST 311: Introduction to Computer Networking
+CS 336: Internet Programming
+CST 383: Intro to Data Science
+CST 370: Algorithms
+CST 438: Software Engineering
+CST 499: Directed Group Capstone

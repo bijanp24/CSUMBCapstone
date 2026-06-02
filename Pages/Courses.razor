@@ -1,0 +1,28 @@
+@page "/courses"
+
+<PageTitle>Courses | Bijan Pourazari CSUMB Portfolio</PageTitle>
+
+<section class="page-hero">
+    <p class="eyebrow">Course catalog</p>
+    <h1>Recovered CSUMB Computer Science coursework.</h1>
+    <p>
+        Each course page preserves the original description and recovered project
+        artifacts from the old portfolio in a cleaner static format.
+    </p>
+</section>
+
+<section class="course-grid">
+    @foreach (var course in CourseCatalog.Courses)
+    {
+        <article class="course-card">
+            <p class="eyebrow">@course.Code</p>
+            <h2>@course.Title</h2>
+            <p>@course.Description</p>
+            <div class="card-meta">
+                <span>@course.Units units</span>
+                <span>@course.Projects.Count project section@(course.Projects.Count == 1 ? "" : "s")</span>
+            </div>
+            <NavLink class="text-link" href="@($"courses/{course.Slug}")">Open course</NavLink>
+        </article>
+    }
+</section>

@@ -1,0 +1,45 @@
+URL: https://bijanpourazaricsumb.weebly.com/cst-383-intro-to-data-science.html
+TITLE: CST 383: Intro to Data Science - BIJAN POURAZARI
+
+CST 383: Intro to Data Science - BIJAN POURAZARI
+BIJAN POURAZARI
+Home
+Courses
+CST 300, Major ProSeminar
+CST 205: Multimedia Design and Programming
+CST 338: Software Design
+CST 361S: CS and Community Service
+CST 363: Database Management
+CST 311: Introduction to Computer Networking
+CS 336: Internet Programming
+CST 383: Intro to Data Science
+CST 370: Algorithms
+CST 438: Software Engineering
+CST 499: Directed Group Capstone
+CST 383: I
+ntro to Data Science
+In data science, data analysis and machine learning techniques are applied to visualize data, understand trends, and make predictions. In this course students will learn how to obtain data, preprocess it, apply machine learning methods, and visualize the results. A student who completes the course will have enough theoretical knowledge, and enough skill with modern statistical programming languages and their libraries,to define and perform complete data science projects.
+Prereq: (
+CST 238
+AND
+MATH 130
+)
+Units:
+4 — 4
+Final Project
+Powered by
+Create your own unique website with customizable templates.
+Get Started
+Home
+Courses
+CST 300, Major ProSeminar
+CST 205: Multimedia Design and Programming
+CST 338: Software Design
+CST 361S: CS and Community Service
+CST 363: Database Management
+CST 311: Introduction to Computer Networking
+CS 336: Internet Programming
+CST 383: Intro to Data Science
+CST 370: Algorithms
+CST 438: Software Engineering
+CST 499: Directed Group Capstone

@@ -1,0 +1,52 @@
+URL: https://bijanpourazaricsumb.weebly.com/cs-336-internet-programming.html
+TITLE: CS 336: Internet Programming - BIJAN POURAZARI
+
+CS 336: Internet Programming - BIJAN POURAZARI
+BIJAN POURAZARI
+Home
+Courses
+CST 300, Major ProSeminar
+CST 205: Multimedia Design and Programming
+CST 338: Software Design
+CST 361S: CS and Community Service
+CST 363: Database Management
+CST 311: Introduction to Computer Networking
+CS 336: Internet Programming
+CST 383: Intro to Data Science
+CST 370: Algorithms
+CST 438: Software Engineering
+CST 499: Directed Group Capstone
+CST 336: Internet Programming
+Provides students with dynamic web application development skills, focusing on the PHP, MySQL, and JavaScript. Coverage includes the Internet architecture, XHTML, CSS, programming with PHP, database and MySQL, and client-side programming with JavaScript. (Prereq:
+CST 238
+)
+Units:
+4 — 4
+Homework
+HW1:
+bipo-19-hw1.herokuapp.com/index.html
+HW2:
+bipo-19-hw2.herokuapp.com/
+HW3:
+bipo-19-hw3.herokuapp.com/index.html
+HW4:
+bipo20-hw4.herokuapp.com/
+Final Project
+​
+bipo20-finalproject.herokuapp.com/
+Powered by
+Create your own unique website with customizable templates.
+Get Started
+Home
+Courses
+CST 300, Major ProSeminar
+CST 205: Multimedia Design and Programming
+CST 338: Software Design
+CST 361S: CS and Community Service
+CST 363: Database Management
+CST 311: Introduction to Computer Networking
+CS 336: Internet Programming
+CST 383: Intro to Data Science
+CST 370: Algorithms
+CST 438: Software Engineering
+CST 499: Directed Group Capstone

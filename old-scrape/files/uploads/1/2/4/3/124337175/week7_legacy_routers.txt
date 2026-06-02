@@ -1,0 +1,73 @@
+# CST-311 Programming Assignment #4
+# Beebe, Pourazari, Kim, Zed
+
+#!/usr/bin/python
+from mininet.net import Mininet
+from mininet.node import Controller, RemoteController, OVSController
+from mininet.node import Host, Node
+from mininet.node import OVSKernelSwitch, UserSwitch
+from mininet.node import IVSSwitch
+from mininet.cli import CLI
+from mininet.log import setLogLevel, info
+from mininet.link import TCLink, Intf
+from subprocess import call
+
+def myNetwork():
+
+    net = Mininet( topo=None, build=False,ipBase='10.0.0.0/24')
+    info( '*** Adding controller\n' )
+    c0=net.addController(name='c0', controller=Controller, protocol='tcp', port=6633)
+    info( '*** Add switches\n')
+    s2 = net.addSwitch('s2', cls=OVSKernelSwitch)
+    s1 = net.addSwitch('s1', cls=OVSKernelSwitch)
+# set r5-eth0 IP so it can communicate with h2
+    r5 = net.addHost('r5', cls=Node, ip='10.0.200.254/24')
+    r5.cmd('sysctl -w net.ipv4.ip_forward=1')
+# set r4-eth0 IP so it can communicate with r3
+    r4 = net.addHost('r4', cls=Node, ip='192.168.10.2/30')
+    r4.cmd('sysctl -w net.ipv4.ip_forward=1')
+# set r3-eth0 IP so it can communicate with h1
+    r3 = net.addHost('r3', cls=Node, ip='10.0.100.254/24')
+    r3.cmd('sysctl -w net.ipv4.ip_forward=1')
+
+    info( '*** Add hosts\n')
+# assigned h1 and h2 IP addresses and set their default routes to their first hop gateway
+# so the hosts can send packets outside the local subnet to the default gateway
+    h1 = net.addHost('h1', cls=Host, ip='10.0.100.1/24', defaultRoute='via 10.0.100.254')
+    h2 = net.addHost('h2', cls=Host, ip='10.0.200.1/24', defaultRoute='via 10.0.200.254')
+    info( '*** Add links\n')
+    net.addLink(h1, s1)
+    net.addLink(h2, s2)
+    net.addLink(s2, r5)
+    net.addLink(s1, r3)
+# added a link between r3 and r4 with their respective IPs so they can pass traffic between each other
+    net.addLink(r3, r4, intfName1='r3-eth1', intfName2='r4-eth0', params1={'ip': '192.168.10.1/30'}, params2={'ip': '192.168.10.2/30'} )
+# added a link between r4 and r5 with their respective IPs so they can pass traffic between each other
+    net.addLink(r4, r5, intfName1='r4-eth1', intfName2='r5-eth1', params1={'ip': '192.168.20.2/30'}, params2={'ip': '192.168.20.1/30'} )
+    
+# all the routes needed for the forwarding tables in each router so traffic from the
+# 10.0.100.0/24 and 10.0.200.0/24 network can traverse the routers
+    r3.cmd('route add -net 10.0.200.0 netmask 255.255.255.0 gw 192.168.10.2 dev r3-eth1')
+    r4.cmd('route add -net 10.0.100.0 netmask 255.255.255.0 gw 192.168.10.1 dev r4-eth0')
+    r4.cmd('route add -net 10.0.200.0 netmask 255.255.255.0 gw 192.168.20.1 dev r4-eth1')
+    r5.cmd('route add -net 10.0.100.0 netmask 255.255.255.0 gw 192.168.20.2 dev r5-eth1')
+    
+    info( '*** Starting network\n')
+    net.build()
+    info( '*** Starting controllers\n')
+    
+    for controller in net.controllers:
+        controller.start()
+        
+    info( '*** Starting switches\n')
+    net.get('s2').start([c0])
+    net.get('s1').start([c0])
+    
+    info( '*** Post configure switches and hosts\n')
+    
+    CLI(net)
+    net.stop()
+
+if __name__ == '__main__':
+    setLogLevel( 'info' )
+    myNetwork()

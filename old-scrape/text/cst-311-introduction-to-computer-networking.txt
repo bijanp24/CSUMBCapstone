@@ -1,0 +1,50 @@
+URL: https://bijanpourazaricsumb.weebly.com/cst-311-introduction-to-computer-networking.html
+TITLE: CST 311: Introduction to Computer Networking - BIJAN POURAZARI
+
+CST 311: Introduction to Computer Networking - BIJAN POURAZARI
+BIJAN POURAZARI
+Home
+Courses
+CST 300, Major ProSeminar
+CST 205: Multimedia Design and Programming
+CST 338: Software Design
+CST 361S: CS and Community Service
+CST 363: Database Management
+CST 311: Introduction to Computer Networking
+CS 336: Internet Programming
+CST 383: Intro to Data Science
+CST 370: Algorithms
+CST 438: Software Engineering
+CST 499: Directed Group Capstone
+CST 311: Intro to Computer Networks
+Survey of Telecomm and Data Comm Technology Fundamentals, Local Area Network, Wide Area Network, Internet and internetworking protocols including TCP/IP, network security and performance, emerging industry trends such as voice over the network and high speed networking. Designed as a foundation for students who wish to pursue more advanced network studies including certificate programs. Includes hands-on networking labs that incorporate Cisco CCNA lab components. (Prereq:
+CST 238
+and
+MATH 130
+)
+Units:
+4 — 4
+Programming Assignment
+week7_legacy_routers.txt
+File Size:
+3 kb
+File Type:
+txt
+Download File
+Labs
+Powered by
+Create your own unique website with customizable templates.
+Get Started
+Home
+Courses
+CST 300, Major ProSeminar
+CST 205: Multimedia Design and Programming
+CST 338: Software Design
+CST 361S: CS and Community Service
+CST 363: Database Management
+CST 311: Introduction to Computer Networking
+CS 336: Internet Programming
+CST 383: Intro to Data Science
+CST 370: Algorithms
+CST 438: Software Engineering
+CST 499: Directed Group Capstone

@@ -1,0 +1,42 @@
+URL: https://bijanpourazaricsumb.weebly.com/cst-438-software-engineering.html
+TITLE: CST 438: Software Engineering - BIJAN POURAZARI
+
+CST 438: Software Engineering - BIJAN POURAZARI
+BIJAN POURAZARI
+Home
+Courses
+CST 300, Major ProSeminar
+CST 205: Multimedia Design and Programming
+CST 338: Software Design
+CST 361S: CS and Community Service
+CST 363: Database Management
+CST 311: Introduction to Computer Networking
+CS 336: Internet Programming
+CST 383: Intro to Data Science
+CST 370: Algorithms
+CST 438: Software Engineering
+CST 499: Directed Group Capstone
+CST 438: Software Engineering
+Prepares students for large-scale software development using software engineering principles and techniques. Coverage includes software process, requirements analysis and specification, software design, implementation, testing, and project management. Students are expected to work in teams to carry out a realistic software project. (Prereq:
+CST 338
+)
+Units:
+4 — 4
+Final Project
+​https://damp-lake-38180.herokuapp.com/
+Powered by
+Create your own unique website with customizable templates.
+Get Started
+Home
+Courses
+CST 300, Major ProSeminar
+CST 205: Multimedia Design and Programming
+CST 338: Software Design
+CST 361S: CS and Community Service
+CST 363: Database Management
+CST 311: Introduction to Computer Networking
+CS 336: Internet Programming
+CST 383: Intro to Data Science
+CST 370: Algorithms
+CST 438: Software Engineering
+CST 499: Directed Group Capstone

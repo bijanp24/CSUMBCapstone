@@ -1,0 +1,85 @@
+URL: https://bijanpourazaricsumb.weebly.com/cst-363-database-management.html
+TITLE: CST 363: Database Management - BIJAN POURAZARI
+
+CST 363: Database Management - BIJAN POURAZARI
+BIJAN POURAZARI
+Home
+Courses
+CST 300, Major ProSeminar
+CST 205: Multimedia Design and Programming
+CST 338: Software Design
+CST 361S: CS and Community Service
+CST 363: Database Management
+CST 311: Introduction to Computer Networking
+CS 336: Internet Programming
+CST 383: Intro to Data Science
+CST 370: Algorithms
+CST 438: Software Engineering
+CST 499: Directed Group Capstone
+CST 363: Introduction to Database Systems
+This course provides balanced coverage of database use and design,focusing on relational databases. Students will learn to design relational schemas, write SQL queries, access a DB programmatically,and perform database administration. Students will gain a working knowledge of the algorithms and data structures used in query evaluation and transaction processing. Students will also learn to apply newer database technologies such as XML, NoSQL, and Hadoop. (Prereq:
+CST 238
+AND
+MATH 130
+)
+Units:
+4 — 4
+Final Project
+projectpart1.pdf
+File Size:
+117 kb
+File Type:
+pdf
+Download File
+add_director_servlet.java
+File Size:
+1 kb
+File Type:
+java
+Download File
+add_movie_servlet.java
+File Size:
+2 kb
+File Type:
+java
+Download File
+movie_search.java
+File Size:
+2 kb
+File Type:
+java
+Download File
+movie_search_firstname_servlet.java
+File Size:
+3 kb
+File Type:
+java
+Download File
+view_directors_servlet.java
+File Size:
+2 kb
+File Type:
+java
+Download File
+view_movies_servlet.java
+File Size:
+2 kb
+File Type:
+java
+Download File
+Powered by
+Create your own unique website with customizable templates.
+Get Started
+Home
+Courses
+CST 300, Major ProSeminar
+CST 205: Multimedia Design and Programming
+CST 338: Software Design
+CST 361S: CS and Community Service
+CST 363: Database Management
+CST 311: Introduction to Computer Networking
+CS 336: Internet Programming
+CST 383: Intro to Data Science
+CST 370: Algorithms
+CST 438: Software Engineering
+CST 499: Directed Group Capstone

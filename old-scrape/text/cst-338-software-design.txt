@@ -1,0 +1,48 @@
+URL: https://bijanpourazaricsumb.weebly.com/cst-338-software-design.html
+TITLE: CST 338: Software Design - BIJAN POURAZARI
+
+CST 338: Software Design - BIJAN POURAZARI
+BIJAN POURAZARI
+Home
+Courses
+CST 300, Major ProSeminar
+CST 205: Multimedia Design and Programming
+CST 338: Software Design
+CST 361S: CS and Community Service
+CST 363: Database Management
+CST 311: Introduction to Computer Networking
+CS 336: Internet Programming
+CST 383: Intro to Data Science
+CST 370: Algorithms
+CST 438: Software Engineering
+CST 499: Directed Group Capstone
+CST 338: Software Design
+Provides students with the fundamental concepts to develop large-scale software, focusing on the object-oriented programming techniques. Coverage includes the introduction to Java programming language, object-oriented programming, software life cycle and development processes, requirements analysis, and graphical user interface development. (Prereq:
+CST 238
+)
+Units:
+4 — 4
+Final Project
+For the final project I had to choose my own project to code and develop alongside a UML diagram. I chose to code a TicTacToe Android game that supported two players on a single phone or one player versus a fairly rudimentary computer.
+finalspec.docx
+File Size:
+178 kb
+File Type:
+docx
+Download File
+Powered by
+Create your own unique website with customizable templates.
+Get Started
+Home
+Courses
+CST 300, Major ProSeminar
+CST 205: Multimedia Design and Programming
+CST 338: Software Design
+CST 361S: CS and Community Service
+CST 363: Database Management
+CST 311: Introduction to Computer Networking
+CS 336: Internet Programming
+CST 383: Intro to Data Science
+CST 370: Algorithms
+CST 438: Software Engineering
+CST 499: Directed Group Capstone

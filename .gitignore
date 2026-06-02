@@ -1,0 +1,7 @@
+bin/
+obj/
+http.out
+http.err
+*.user
+*.suo
+.vs/

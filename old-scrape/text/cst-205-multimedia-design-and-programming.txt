@@ -1,0 +1,268 @@
+URL: https://bijanpourazaricsumb.weebly.com/cst-205-multimedia-design-and-programming.html
+TITLE: CST 205: Multimedia Design and Programming - BIJAN POURAZARI
+
+CST 205: Multimedia Design and Programming - BIJAN POURAZARI
+BIJAN POURAZARI
+Home
+Courses
+CST 300, Major ProSeminar
+CST 205: Multimedia Design and Programming
+CST 338: Software Design
+CST 361S: CS and Community Service
+CST 363: Database Management
+CST 311: Introduction to Computer Networking
+CS 336: Internet Programming
+CST 383: Intro to Data Science
+CST 370: Algorithms
+CST 438: Software Engineering
+CST 499: Directed Group Capstone
+CST 205: Multimedia Design and Programming
+Introduces design, creation, and manipulation of interactive applications and electronic media for communication purpose. Focuses on creating media, understanding media concepts, and manipulating the created media using basic programming concepts of control flow, functions, expressions and data types in the Python language. Students acquire a basic understanding for digital media formats, how to design, create such media using basic programming skills.
+Units:
+4 — 4
+Rose Colored Glasses
+The Rose Colored Glasses image processing filter makes a picture look pink. We accomplish this by maxing out the red value to 255, and then increasing green and blue by 10% and 20% respectively.
+​def roseColoredGlasses():
+pic = get_pic()
+pixels = getPixels(pic)
+for p in pixels:
+r = getRed(p)
+setRed(p, 255) # set red to max value
+g = getGreen(p)
+setGreen(p, g * 1.1) # increase green and blue by 10% and 20% to increase lightness
+b = getBlue(p)
+setBlue(p, b * 1.2)
+repaint(pic)
+Make Negative
+The Make Negative process changes the image into its negative, which is essentially just the opposite value color. In order to accomplish this task, the new value is set to 255 minus the current value.
+​def makeNegative():
+pic = get_pic()
+pixels = getPixels(pic)
+for p in pixels:
+r = getRed(p)
+setRed(p, 255 - r)
+g = getGreen(p)
+setGreen(p, 255 - g)
+b = getBlue(p)
+setBlue(p, 255 - b)
+repaint(pic)
+Better Black And White
+The Better Black and White function removes color from an image leaving it in only black and white. It does this by calculating the luminance of each pixel using the luminance formula, and setting each pixel color to that value.
+​def betterBnW():
+pic = get_pic()
+pixels = getPixels(pic)
+for p in pixels:
+r = getRed(p)
+g = getGreen(p)
+b = getBlue(p)
+lum = (r * 0.299) + (g * 0.587) + (b * 0.114) # estimate of luminance from luminance formula
+setRed(p, lum) # set all rgb values to lum
+setGreen(p, lum)
+setBlue(p, lum)
+repaint(pic)
+Bottom to Top Mirror
+The Bottom To Top Mirror mirrors an image along its horizontal axis starting from the bottom and working up. It accomplishes this by looping through the top half of the image and replacing each pixel in the top half with a pixel from the bottom half.
+​def horizontalMirrorBottomToTop():
+pic = getPic()
+width = getWidth(pic)
+height = getHeight(pic)
+horizontalMirrorBottomToTopUtil(pic, width, height)
+repaint(pic)
+#Only Pic Logic No Repainting
+def horizontalMirrorBottomToTopUtil(pic, width, height):
+for x in range(0, width):
+for y in range(0, height / 2):
+pixel = getPixel(pic, x, height - y - 1)
+r = getRed(pixel)
+g = getGreen(pixel)
+b = getBlue(pixel)
+replacePixel = getPixel(pic, x, y)
+setRed(replacePixel, r)
+setGreen(replacePixel, g)
+setBlue(replacePixel, b)
+return pic
+Shrink
+The shrink function shrinks and image to half of its size by first creating a blank image that is half the size of the input and then copying into that new image every other pixel from the input.
+​def shrink(pic):
+width = getWidth(pic) / 2
+height = getHeight(pic) / 2
+copy = makeEmptyPicture(width, height)
+for x in range (0, width):
+for y in range (0, height):
+picPixel = getPixel(pic, x * 2, y * 2)
+copyPixel = getPixel(copy, x, y)
+picColor = getColor(picPixel)
+setColor(copyPixel, picColor)
+return copy
+Collage
+The Collage function makes a photo collage by first running functions on pictures to transform the pictures in some way, and then copying in those pictures into a new empty picture set to the size of the collage.
+​def collage():
+collage = makeEmptyPicture(2048, 3072)
+#chromaKey pictures
+pic = makePicture(r"C:\Users\Bijan\Desktop\CS Online\CS205\collagePhotos\guy.jpg")
+pic2 = makePicture(r"C:\Users\Bijan\Desktop\CS Online\CS205\collagePhotos\CSUMB_Landscape.jpg")
+chroma = chromaKey(pic, pic2) #767 x 720
+#sepia pic
+pic = makePicture(r"C:\Users\Bijan\Desktop\CS Online\CS205\collagePhotos\Levi.jpg")
+sepiaPic = sepia(pic) #1080 x 1080
+#artify pic
+pic = makePicture(r"C:\Users\Bijan\Desktop\CS Online\CS205\collagePhotos\Nicolas.png")
+artifyPic = artify(pic) #1020 x 681
+#black and white pic
+pic = makePicture(r"C:\Users\Bijan\Desktop\CS Online\CS205\collagePhotos\N.jpg")
+bnw = betterBnW(pic) #1024 x 1024
+#P pic and horizontal mirror
+p = makePicture(r"C:\Users\Bijan\Desktop\CS Online\CS205\collagePhotos\P.jpg") #1024 x 1024
+p = horizontalMirrorTopToBottom(p)
+george = makePicture(r"C:\Users\Bijan\Desktop\CS Online\CS205\collagePhotos\L2RMirror.jpg")
+cat = makePicture(r"C:\Users\Bijan\Desktop\CS Online\CS205\collagePhotos\Cat.jpg")
+#Y pic
+y = makePicture(r"C:\Users\Bijan\Desktop\CS Online\CS205\collagePhotos\Y.jpg") #1024 x 1024
+#T pic
+t = makePicture(r"C:\Users\Bijan\Desktop\CS Online\CS205\collagePhotos\T.jpg") #1024 x 1024
+#H pic
+h = makePicture(r"C:\Users\Bijan\Desktop\CS Online\CS205\collagePhotos\H.jpg") #1024 x 1024
+#O pic
+o = makePicture(r"C:\Users\Bijan\Desktop\CS Online\CS205\collagePhotos\O.jpg") #1024 x 1024
+#pic = getPic()
+#mirrorPic = horizontalMirrorTopToBottom()
+pyCopy(p, collage, 0, 0)
+pyCopy(y, collage, 1024, 0)
+pyCopy(sepiaPic, collage, 0, 1024)
+pyCopy(artifyPic, collage, 1024, 1024)
+pyCopy(george, collage, 1024, 1705)
+pyCopy(cat, collage, 1770, 1705)
+pyCopy(o, collage, 0, 2048)
+pyCopy(bnw, collage, 1024, 2047)
+pyCopy(chroma, collage, 640, 304)
+repaint(collage)
+Red Eye Fix
+The red eye fix function aims to remove the common red eye issue in photos by identifying first which part of the image is the eye, and then replacing the pixels in the eye that are red with a different color.
+​def redeyeFix():
+pic = makePicture("E:\\CSUMB - CS Online\\3. CST205\\Module 1\\Lab #1\\red_eye.png")
+redeye = makeColor(255, 113, 127)
+redeye2 = makeColor(251, 64, 81)
+normaleye = makeColor(135, 115, 114)
+for x in range(178, 367):
+for y in range(274, 321):
+px = getPixel(pic, x, y)
+color = getColor(px)
+if distance(color, redeye) < 65.0:
+setColor(px, normaleye)
+if distance(color, redeye2) < 95.0:
+setColor(px, normaleye)
+show(pic)
+return pic
+Artify
+The artify function creates a posterization of an image by assigning a single value for each r,g,b for a certain range of values.
+​def artify():
+pic = get_pic()
+pixels = getPixels(pic)
+for p in pixels:
+r = getRed(p)
+g = getGreen(p)
+b = getBlue(p)
+# adjust red
+if r < 64:
+setRed(p, 31)
+elif r > 63 and r < 128:
+setRed(p, 95)
+elif r > 127 and r < 192:
+setRed(p, 159)
+else:
+setRed(p, 223)
+# adjust green
+if g < 64:
+setGreen(p, 31)
+elif g > 63 and g < 128:
+setGreen(p, 95)
+elif g > 127 and g < 192:
+setGreen(p, 159)
+else:
+setGreen(p, 223)
+# adjust blue
+if b < 64:
+setBlue(p, 31)
+elif b > 63 and b < 128:
+setBlue(p, 95)
+elif b > 127 and b < 192:
+setBlue(p, 159)
+else:
+setBlue(p, 223)
+repaint(pic)
+Green Screen
+The chroma key function replaces a green screen image with a different background. It does this by looping through all of the pixels of the image and if the pixel is found to be green, it is replaced with the corresponding pixel in the background image.
+​def chromakey():
+background = makePicture("E:\\CSUMB - CS Online\\3. CST205\\Module 1\\Lab #1\\background2.jpg")
+subject = get_pic()
+greenscreen = makeColor(45, 255, 64) # this changes slightly depending on subject picture
+newpic = makeEmptyPicture(getWidth(background), getHeight(background))
+for x in range(0, getWidth(newpic)):
+for y in range(0, getHeight(newpic)):
+# for each pixel in newpic, set color to the background
+setColor(getPixel(newpic, x, y), getColor(getPixel(background, x, y)))
+# if same x,y location in subject image is not close to green, set color to subject
+if not distance(getColor(getPixel(subject, x, y)), greenscreen) < 150.0:
+setColor(getPixel(newpic, x, y), getColor(getPixel(subject, x, y)))
+show(newpic)
+return newpic
+St. Patrick's Day Card
+The makeCard function creates a St. Patrick's Day card by utilizing an image copy function and a text input function.
+​def makeCard():
+setMediaPath()
+print("Select background picture:")
+card = getPic()
+print("Select 3 picture:")
+pyCopy(getPic(), card, 0, 300)
+pyCopy(getPic(), card, 84, 300)
+pyCopy(getPic(), card, 162, 300)
+cardStyle = makeStyle(mono, italic+bold, 32)
+addTextWithStyle(card, 50, 60,  "Happy", cardStyle, white)
+addTextWithStyle(card, 5, 105,  "St. Patricks", cardStyle, white)
+addTextWithStyle(card, 45, 150,  "Day!", cardStyle, white)
+show(card)
+writePictureTo(card, "newcard.png")
+Line Drawing
+This line drawing function creates a black and white line draw effect where it appears as if the image was sketched out by an artist with pencil and paper. The main algorithm at work here is to first convert the image to black and white using the betterBnW function which utilizes the luminance formula. Once we have the luminance of the pixels, we need to check for every pixel the pixel below it and the pixel to the right of it to see if the difference between the luminances are within a desired value, which is passed to the function. This was the solution I chose because instead of making the decision myself what the difference allowed should be, I believe it is better to allow that to be passed into the function. If the luminances are too different, they are set to black, otherwise they are set to white. The image given here was using a value of 50 for the difference.
+​def betterBnW(pic):
+pixels = getPixels(pic)
+for p in pixels:
+r = getRed(p)
+g = getGreen(p)
+b = getBlue(p)
+lum = (r * 0.299) + (g * 0.587) + (b * 0.114) # estimate of luminance from luminance formula
+setRed(p, lum) # set all rgb values to lum
+setGreen(p, lum)
+setBlue(p, lum)
+def lineDrawing(value):
+pic = get_pic()
+betterBnW(pic)
+for x in range(0, getWidth(pic) -1):
+for y in range(0, getHeight(pic) -1):
+p = getPixel(pic, x, y)
+pRight = getPixel(pic, x + 1, y)
+pBelow = getPixel(pic, x, y + 1)
+lumP = (getRed(p) + getGreen(p) + getBlue(p)) / 3
+lumPRight = (getRed(pRight) + getGreen(pRight) + getBlue(pRight)) / 3
+lumPBelow = (getRed(pBelow) + getGreen(pBelow) + getBlue(pBelow)) / 3
+if(abs(lumP - lumPRight) + abs(lumP - lumPBelow)) > value:
+setColor(p, black)
+else:
+setColor(p, white)
+return pic
+Powered by
+Create your own unique website with customizable templates.
+Get Started
+Home
+Courses
+CST 300, Major ProSeminar
+CST 205: Multimedia Design and Programming
+CST 338: Software Design
+CST 361S: CS and Community Service
+CST 363: Database Management
+CST 311: Introduction to Computer Networking
+CS 336: Internet Programming
+CST 383: Intro to Data Science
+CST 370: Algorithms
+CST 438: Software Engineering
+CST 499: Directed Group Capstone
