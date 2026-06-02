@@ -2,6 +2,28 @@
 
 Static Blazor WebAssembly rebuild of Bijan Pourazari's recovered CSUMB Computer Science portfolio.
 
+## Overview
+
+A professional portfolio site showcasing coursework from California State University, Monterey Bay's Computer Science program. Built with .NET 8.0 Blazor WebAssembly and Bootstrap styling.
+
+**Live Routes:**
+- `/` — Home page with hero section and course overview
+- `/courses` — Catalog of 10+ courses with descriptions
+- `/courses/<slug>` — Individual course detail pages with projects and artifacts
+
+**Featured Coursework:**
+- Multimedia Design & Programming (image processing, Python)
+- Software Design (Android game development, UML)
+- Database Management (Java servlets, SQL)
+- Computer Networking, Internet Programming, Algorithms
+- Directed Group Capstone with proposal and report
+
+**Course Assets:**
+- Project descriptions and documentation
+- Downloadable files (PDFs, Word docs, Java source code)
+- Gallery images from multimedia projects
+- External links to archived Heroku deployments
+
 The original scraped pages and uploads are preserved in `old-scrape/`. Public assets used by the Blazor app are served from `wwwroot/portfolio/`.
 
 ## Local Development
